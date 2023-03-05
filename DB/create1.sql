@@ -1,0 +1,7 @@
+CREATE TABLE "Eng suh pereseh" (
+	"_ID"	INTEGER NOT NULL UNIQUE,
+	"eng"	TEXT,
+	"rus"	TEXT,
+	"comm"	TEXT,
+	PRIMARY KEY("_ID" AUTOINCREMENT)
+);

@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bukv_0"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="400dp"
+        android:layout_height="90dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@color/bukv_0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Словарь"
+                android:textAlignment="center" />
+
+            <RadioGroup
+                android:id="@+id/rg_lang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#2196F3"
+                android:orientation="vertical"
+                android:textAlignment="center">
+
+                <RadioButton
+                    android:id="@+id/rbt_ru"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:minHeight="20dp"
+                    android:onClick="Click_Lang"
+                    android:text="Рус"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rbt_en"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="20dp"
+                    android:onClick="Click_Lang"
+                    android:text="Eng"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_marginHorizontal="4dp"
+            android:layout_marginBottom="609dp"
+            android:background="@color/bukv_0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Букв"
+                android:textAlignment="center" />
+
+            <RadioGroup
+                android:id="@+id/rg_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#2196F3"
+                android:orientation="horizontal"
+                android:textAlignment="center">
+
+                <RadioButton
+                    android:id="@+id/radioButton6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:minWidth="20dp"
+                    android:minHeight="20dp"
+                    android:onClick="Click_Count"
+                    android:text="5"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/radioButton7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minWidth="20dp"
+                    android:minHeight="20dp"
+                    android:onClick="Click_Count"
+                    android:text="6"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/radioButton15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minWidth="20dp"
+                    android:minHeight="20dp"
+                    android:onClick="Click_Count"
+                    android:text="7"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minWidth="20dp"
+                    android:minHeight="20dp"
+                    android:onClick="Click_Count"
+                    android:text="8"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textStyle="bold"
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/bukv_0"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/Chk_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginHorizontal="8dp"
+                android:checked="false"
+                android:minHeight="60sp"
+                android:onClick="Click_Comment"
+                android:text="Коммент"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/tx_vsego"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Отбор"
+                android:textColor="#FFEB3B"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="0dp"
+        android:paddingHorizontal="0dp"
+        android:paddingVertical="0dp"
+        android:scrollbarSize="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/lin_butt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:backgroundTint="#FF1744">
+
+            <Button
+                android:id="@+id/bt_01_01"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:backgroundTintMode="src_in"
+                android:elevation="10dp"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="в"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_01_02"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:backgroundTintMode="src_in"
+                android:elevation="10dp"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="в"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_01_03"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="б"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_01_04"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="г"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_01_05"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="д"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_01_06"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="е"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_01_07"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="ж"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_01_08"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="з"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt_02_01"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="и"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_02_02"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="и"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_02_03"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="и"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_02_04"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="и"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_02_05"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="и"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_02_06"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="и"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_02_07"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="и"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_02_08"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="и"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt_03_01"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="и"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_03_02"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="р"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_03_03"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="р"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_03_04"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="р"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_03_05"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="р"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_03_06"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="р"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_03_07"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="р"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_03_08"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="р"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/bt_04_01"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="и"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_04_02"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="ш"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_04_03"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="ш"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_04_04"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="ш"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_04_05"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="ш"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_04_06"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="ш"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_04_07"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="ш"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_04_08"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="ш"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/ed_slovo1"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv_Slovo"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="Ш"
+                android:textColor="@color/black"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/ed_slovo2"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv_Slovo"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="Ш"
+                android:textColor="@color/black"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/ed_slovo3"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv_Slovo"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="Ш"
+                android:textColor="@color/black"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/ed_slovo4"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv_Slovo"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="Ш"
+                android:textColor="@color/black"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/ed_slovo5"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv_Slovo"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="Ш"
+                android:textColor="@color/black"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/ed_slovo6"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv_Slovo"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="Ш"
+                android:textColor="@color/black"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/ed_slovo7"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv_Slovo"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="Ш"
+                android:textColor="@color/black"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <Button
+                android:id="@+id/ed_slovo8"
+                android:layout_width="40dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv_Slovo"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="Ш"
+                android:textColor="@color/black"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/lin_butt"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout">
+
+        <Button
+            android:id="@+id/btn_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#3D5AFE"
+            android:onClick="Click_Select"
+            android:text="Отбор"
+            android:textSize="12sp"
+            app:cornerRadius="20dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@color/bukv_no"
+            android:text="НЕТ"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:background="@color/bukv_yes"
+            android:text="ЕСТЬ"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="TextContrastCheck" />
+
+        <Button
+            android:id="@+id/btn_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:backgroundTint="#3D5AFE"
+            android:onClick="Click_Clear"
+            android:text="Очистка"
+            android:textSize="12sp"
+            app:cornerRadius="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lin_butt">
+
+        <TextView
+            android:id="@+id/txt_select1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/teal_200"
+            android:fontFamily="@font/courier_prime"
+            android:shadowColor="#D500F9"
+            android:text="Результат"
+            android:textColorLink="#FFEA00"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_select2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="4dp"
+            android:layout_weight="1"
+            android:background="#00E676"
+            android:fontFamily="@font/courier_prime"
+            android:shadowColor="#D500F9"
+            android:text="Результат"
+            android:textColorLink="#FFEA00"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

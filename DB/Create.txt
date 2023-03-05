@@ -1,0 +1,5 @@
+CREATE TABLE "Eng suh pereseh" (
+	"eng"	TEXT,
+	"rus"	TEXT,
+	"comm"	TEXT
+)
