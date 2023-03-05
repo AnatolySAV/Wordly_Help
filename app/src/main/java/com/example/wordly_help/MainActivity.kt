@@ -15,8 +15,8 @@ import com.example.wordly_help.R.drawable.text_style_no
 import java.io.IOException
 
 public var ed_slovo = arrayOfNulls<Button>(8)
-public var bt = arrayOfNulls<Button>(32)
-public var sost_bukv = Array<Int>(33,{0})
+public var bt = arrayOfNulls<Button>(31)
+public var sost_bukv = Array<Int>(32,{0})
 
 
 public var sdvig_rus = 1072
@@ -28,7 +28,13 @@ var btn_select: Button? = null
 var  tx_vsego : TextView? = null
 var txt_select1: TextView? = null
 var txt_select2: TextView? = null
+public val Bukv_qwerty_Rus1 = arrayOf("й","ц","у","к","е","н","г", "ш", "щ", "з", "х")
+public val Bukv_qwerty_Rus2 = arrayOf("ф", "ы","в","а","п","р","о","л", "д", "ж", "э")
+public val Bukv_qwerty_Rus3 = arrayOf("я", "ч","с","м","и","т", "ь", "б", "ю")
 
+public val Bukv_qwerty_Eng1 = arrayOf("q","w","e","r","t","y","u", "i", "o", "p", "")
+public val Bukv_qwerty_Eng2 = arrayOf("a", "s","d","f","g","h","j","k", "l", "", "")
+public val Bukv_qwerty_Eng3 = arrayOf("z", "x", "c", "v", "b","n","m","","")
 
 class MainActivity : AppCompatActivity() {
     // Объявим переменные компонентов
@@ -73,33 +79,32 @@ class MainActivity : AppCompatActivity() {
         bt[5] = findViewById(R.id.bt_01_06) as Button // буквы
         bt[6] = findViewById(R.id.bt_01_07) as Button // буквы
         bt[7] = findViewById(R.id.bt_01_08) as Button // буквы
+        bt[8] = findViewById(R.id.bt_01_09) as Button // буквы
+        bt[9] = findViewById(R.id.bt_01_10) as Button // буквы
+        bt[10] = findViewById(R.id.bt_01_11) as Button // буквы
 
-        bt[8] = findViewById(R.id.bt_02_01) as Button // буквы
-        bt[9] = findViewById(R.id.bt_02_02) as Button // буквы
-        bt[10] = findViewById(R.id.bt_02_03) as Button // буквы
-        bt[11] = findViewById(R.id.bt_02_04) as Button // буквы
-        bt[12] = findViewById(R.id.bt_02_05) as Button // буквы
-        bt[13] = findViewById(R.id.bt_02_06) as Button // буквы
-        bt[14] = findViewById(R.id.bt_02_07) as Button // буквы
-        bt[15] = findViewById(R.id.bt_02_08) as Button // буквы
+        bt[11] = findViewById(R.id.bt_02_01) as Button // буквы
+        bt[12] = findViewById(R.id.bt_02_02) as Button // буквы
+        bt[13] = findViewById(R.id.bt_02_03) as Button // буквы
+        bt[14] = findViewById(R.id.bt_02_04) as Button // буквы
+        bt[15] = findViewById(R.id.bt_02_05) as Button // буквы
+        bt[16] = findViewById(R.id.bt_02_06) as Button // буквы
+        bt[17] = findViewById(R.id.bt_02_07) as Button // буквы
+        bt[18] = findViewById(R.id.bt_02_08) as Button // буквы
+        bt[19] = findViewById(R.id.bt_02_09) as Button // буквы
+        bt[20] = findViewById(R.id.bt_02_10) as Button // буквы
+        bt[21] = findViewById(R.id.bt_02_11) as Button // буквы
 
-        bt[16] = findViewById(R.id.bt_03_01) as Button // буквы
-        bt[17] = findViewById(R.id.bt_03_02) as Button // буквы
-        bt[18] = findViewById(R.id.bt_03_03) as Button // буквы
-        bt[19] = findViewById(R.id.bt_03_04) as Button // буквы
-        bt[20] = findViewById(R.id.bt_03_05) as Button // буквы
-        bt[21] = findViewById(R.id.bt_03_06) as Button // буквы
-        bt[22] = findViewById(R.id.bt_03_07) as Button // буквы
-        bt[23] = findViewById(R.id.bt_03_08) as Button // буквы
+        bt[22] = findViewById(R.id.bt_03_01) as Button // буквы
+        bt[23] = findViewById(R.id.bt_03_02) as Button // буквы
+        bt[24] = findViewById(R.id.bt_03_03) as Button // буквы
+        bt[25] = findViewById(R.id.bt_03_04) as Button // буквы
+        bt[26] = findViewById(R.id.bt_03_05) as Button // буквы
+        bt[27] = findViewById(R.id.bt_03_06) as Button // буквы
+        bt[28] = findViewById(R.id.bt_03_07) as Button // буквы
+        bt[29] = findViewById(R.id.bt_03_08) as Button // буквы
+        bt[30] = findViewById(R.id.bt_03_09) as Button // буквы
 
-        bt[24] = findViewById(R.id.bt_04_01) as Button // буквы
-        bt[25] = findViewById(R.id.bt_04_02) as Button // буквы
-        bt[26] = findViewById(R.id.bt_04_03) as Button // буквы
-        bt[27] = findViewById(R.id.bt_04_04) as Button // буквы
-        bt[28] = findViewById(R.id.bt_04_05) as Button // буквы
-        bt[29] = findViewById(R.id.bt_04_06) as Button // буквы
-        bt[30] = findViewById(R.id.bt_04_07) as Button // буквы
-        bt[31] = findViewById(R.id.bt_04_08) as Button // буквы
 
         ed_slovo[0] = findViewById(R.id.ed_slovo1) as Button // буквы
         ed_slovo[1] = findViewById(R.id.ed_slovo2) as Button // буквы
@@ -134,8 +139,8 @@ class MainActivity : AppCompatActivity() {
         SQL_str += Count_Bukv.toString()
         var  NNN = 0
         var  Bukva = ""
-        if (Lang=="Рус") NNN = 32 else NNN =26
-        for (i in 1..NNN) {
+//        if (Lang=="Рус") NNN = 32 else NNN =26
+        for (i in 1..31) {
             if (sost_bukv[i-1]==2) {
                 Bukva = bt[i-1]?.text.toString()
                 if (Lang=="Рус") {
@@ -218,14 +223,17 @@ class MainActivity : AppCompatActivity() {
             0 -> {
                 sost_bukv[numb] = 1
                 bt[numb]?.backgroundTintList = ColorStateList.valueOf(/* color = */Color.RED)
+                bt[numb]?.setTextColor(ColorStateList.valueOf(/* color = */Color.WHITE))
             }
             1 -> {
                 sost_bukv[numb] = 2
                 bt[numb]?.backgroundTintList = ColorStateList.valueOf(/* color = */Color.GREEN)
+                bt[numb]?.setTextColor(ColorStateList.valueOf(/* color = */Color.BLACK))
             }
            2 -> {
                 sost_bukv[numb] = 0
                 bt[numb]?.backgroundTintList = ColorStateList.valueOf(/* color = */R.color.bukv_0)
+                bt[numb]?.setTextColor(ColorStateList.valueOf(/* color = */Color.WHITE))
             }
             else -> {}
 
@@ -253,9 +261,9 @@ class MainActivity : AppCompatActivity() {
         var PosNumb = 0
         if ((view as Button).text.toString()=="") {
 // Кнопка пустая ищем любую зеленую
-            for (i in 0..32) {
+            for (i in 0..31) {
                 if (sost_bukv[i] == 2) {
-                    if (i!=32) (view as Button).text = bt[i]!!.text.toString()
+                    if (i!=31) (view as Button).text = bt[i]!!.text.toString()
 
                     else (view as Button).text = ""
                     break
@@ -263,15 +271,15 @@ class MainActivity : AppCompatActivity() {
             }
         }
         else {
-            for (i in 0..32) {
+            for (i in 0..31) {
                 if ((sost_bukv[i] == 2) and ((view as Button).text == bt[i]!!.text.toString())) {
                     PosNumb = i+1
                     break
                 }
             }
-            for (i in PosNumb..32) {
+            for (i in PosNumb..31) {
                 if ((sost_bukv[i] == 2)) {
-                    if (i!=32) (view as Button).text = bt[i]!!.text.toString()
+                    if (i!=31) (view as Button).text = bt[i]!!.text.toString()
 
                     else (view as Button).text = ""
                     break

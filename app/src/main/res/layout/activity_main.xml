@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="400dp"
+        android:layout_width="0dp"
         android:layout_height="90dp"
         android:layout_marginHorizontal="8dp"
         android:layout_marginStart="8dp"
@@ -25,7 +25,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="90dp"
-            android:layout_marginHorizontal="10dp"
+            android:layout_marginLeft="8dp"
             android:background="@color/bukv_0"
             android:orientation="vertical">
 
@@ -171,16 +171,17 @@
 
             <CheckBox
                 android:id="@+id/Chk_comment"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="35dp"
-                android:layout_marginHorizontal="8dp"
+                android:layout_marginRight="8dp"
                 android:checked="false"
                 android:minHeight="60sp"
                 android:onClick="Click_Comment"
                 android:text="Коммент"
+                android:textAlignment="viewStart"
                 android:textColor="@color/white"
                 android:textColorHint="@color/white"
-                android:textSize="12sp"
+                android:textSize="11sp"
                 android:textStyle="bold"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -221,7 +222,7 @@
 
             <Button
                 android:id="@+id/bt_01_01"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -237,14 +238,14 @@
                 android:scrollbarSize="0dp"
                 android:text="в"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/bt_01_02"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -260,14 +261,14 @@
                 android:scrollbarSize="0dp"
                 android:text="в"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/bt_01_03"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -281,14 +282,14 @@
                 android:scrollbarSize="0dp"
                 android:text="б"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/bt_01_04"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -302,14 +303,14 @@
                 android:scrollbarSize="0dp"
                 android:text="г"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/bt_01_05"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -323,14 +324,14 @@
                 android:scrollbarSize="0dp"
                 android:text="д"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/bt_01_06"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -344,14 +345,14 @@
                 android:scrollbarSize="0dp"
                 android:text="е"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/bt_01_07"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -365,14 +366,14 @@
                 android:scrollbarSize="0dp"
                 android:text="ж"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/bt_01_08"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -386,7 +387,70 @@
                 android:scrollbarSize="0dp"
                 android:text="з"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_01_09"
+                android:layout_width="29dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="з"
+                android:textColorLink="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_01_10"
+                android:layout_width="29dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="з"
+                android:textColorLink="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_01_11"
+                android:layout_width="29dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="з"
+                android:textColorLink="@color/white"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
@@ -399,7 +463,7 @@
 
             <Button
                 android:id="@+id/bt_02_01"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -413,14 +477,14 @@
                 android:scrollbarSize="0dp"
                 android:text="и"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/bt_02_02"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -434,14 +498,14 @@
                 android:scrollbarSize="0dp"
                 android:text="и"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/bt_02_03"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -455,14 +519,14 @@
                 android:scrollbarSize="0dp"
                 android:text="и"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/bt_02_04"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -476,14 +540,14 @@
                 android:scrollbarSize="0dp"
                 android:text="и"
                 android:textColorLink="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
 
             <Button
                 android:id="@+id/bt_02_05"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -504,7 +568,7 @@
 
             <Button
                 android:id="@+id/bt_02_06"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -525,7 +589,7 @@
 
             <Button
                 android:id="@+id/bt_02_07"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -546,7 +610,7 @@
 
             <Button
                 android:id="@+id/bt_02_08"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -564,15 +628,81 @@
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_02_09"
+                android:layout_width="29dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="з"
+                android:textColorLink="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Button
+                android:id="@+id/bt_02_10"
+                android:layout_width="29dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="з"
+                android:textColorLink="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+            <Button
+                android:id="@+id/bt_02_11"
+                android:layout_width="29dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="з"
+                android:textColorLink="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:id="@+id/zagl1"
+                android:layout_width="29dp"
+                android:layout_height="wrap_content" />
             <Button
                 android:id="@+id/bt_03_01"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -593,7 +723,7 @@
 
             <Button
                 android:id="@+id/bt_03_02"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -614,7 +744,7 @@
 
             <Button
                 android:id="@+id/bt_03_03"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -635,7 +765,7 @@
 
             <Button
                 android:id="@+id/bt_03_04"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -656,7 +786,7 @@
 
             <Button
                 android:id="@+id/bt_03_05"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -677,7 +807,7 @@
 
             <Button
                 android:id="@+id/bt_03_06"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -698,7 +828,7 @@
 
             <Button
                 android:id="@+id/bt_03_07"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -719,7 +849,27 @@
 
             <Button
                 android:id="@+id/bt_03_08"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="2dp"
+                android:backgroundTint="@color/bukv_0"
+                android:fontFamily="@font/courier_prime"
+                android:onClick="Click_bukv"
+                android:padding="0dp"
+                android:paddingLeft="0dp"
+                android:paddingTop="0dp"
+                android:paddingRight="0dp"
+                android:paddingBottom="0dp"
+                android:scrollbarSize="0dp"
+                android:text="р"
+                android:textColorLink="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                tools:ignore="TouchTargetSizeCheck" />
+            <Button
+                android:id="@+id/bt_03_09"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -739,178 +889,6 @@
                 tools:ignore="TouchTargetSizeCheck" />
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <Button
-                android:id="@+id/bt_04_01"
-                android:layout_width="40dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="2dp"
-                android:backgroundTint="@color/bukv_0"
-                android:fontFamily="@font/courier_prime"
-                android:onClick="Click_bukv"
-                android:padding="0dp"
-                android:paddingLeft="0dp"
-                android:paddingTop="0dp"
-                android:paddingRight="0dp"
-                android:paddingBottom="0dp"
-                android:scrollbarSize="0dp"
-                android:text="и"
-                android:textColorLink="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <Button
-                android:id="@+id/bt_04_02"
-                android:layout_width="40dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="2dp"
-                android:backgroundTint="@color/bukv_0"
-                android:fontFamily="@font/courier_prime"
-                android:onClick="Click_bukv"
-                android:padding="0dp"
-                android:paddingLeft="0dp"
-                android:paddingTop="0dp"
-                android:paddingRight="0dp"
-                android:paddingBottom="0dp"
-                android:scrollbarSize="0dp"
-                android:text="ш"
-                android:textColorLink="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <Button
-                android:id="@+id/bt_04_03"
-                android:layout_width="40dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="2dp"
-                android:backgroundTint="@color/bukv_0"
-                android:fontFamily="@font/courier_prime"
-                android:onClick="Click_bukv"
-                android:padding="0dp"
-                android:paddingLeft="0dp"
-                android:paddingTop="0dp"
-                android:paddingRight="0dp"
-                android:paddingBottom="0dp"
-                android:scrollbarSize="0dp"
-                android:text="ш"
-                android:textColorLink="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <Button
-                android:id="@+id/bt_04_04"
-                android:layout_width="40dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="2dp"
-                android:backgroundTint="@color/bukv_0"
-                android:fontFamily="@font/courier_prime"
-                android:onClick="Click_bukv"
-                android:padding="0dp"
-                android:paddingLeft="0dp"
-                android:paddingTop="0dp"
-                android:paddingRight="0dp"
-                android:paddingBottom="0dp"
-                android:scrollbarSize="0dp"
-                android:text="ш"
-                android:textColorLink="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <Button
-                android:id="@+id/bt_04_05"
-                android:layout_width="40dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="2dp"
-                android:backgroundTint="@color/bukv_0"
-                android:fontFamily="@font/courier_prime"
-                android:onClick="Click_bukv"
-                android:padding="0dp"
-                android:paddingLeft="0dp"
-                android:paddingTop="0dp"
-                android:paddingRight="0dp"
-                android:paddingBottom="0dp"
-                android:scrollbarSize="0dp"
-                android:text="ш"
-                android:textColorLink="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <Button
-                android:id="@+id/bt_04_06"
-                android:layout_width="40dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="2dp"
-                android:backgroundTint="@color/bukv_0"
-                android:fontFamily="@font/courier_prime"
-                android:onClick="Click_bukv"
-                android:padding="0dp"
-                android:paddingLeft="0dp"
-                android:paddingTop="0dp"
-                android:paddingRight="0dp"
-                android:paddingBottom="0dp"
-                android:scrollbarSize="0dp"
-                android:text="ш"
-                android:textColorLink="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <Button
-                android:id="@+id/bt_04_07"
-                android:layout_width="40dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="2dp"
-                android:backgroundTint="@color/bukv_0"
-                android:fontFamily="@font/courier_prime"
-                android:onClick="Click_bukv"
-                android:padding="0dp"
-                android:paddingLeft="0dp"
-                android:paddingTop="0dp"
-                android:paddingRight="0dp"
-                android:paddingBottom="0dp"
-                android:scrollbarSize="0dp"
-                android:text="ш"
-                android:textColorLink="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <Button
-                android:id="@+id/bt_04_08"
-                android:layout_width="40dp"
-                android:layout_height="48dp"
-                android:layout_marginLeft="2dp"
-                android:backgroundTint="@color/bukv_0"
-                android:fontFamily="@font/courier_prime"
-                android:onClick="Click_bukv"
-                android:padding="0dp"
-                android:paddingLeft="0dp"
-                android:paddingTop="0dp"
-                android:paddingRight="0dp"
-                android:paddingBottom="0dp"
-                android:scrollbarSize="0dp"
-                android:text="ш"
-                android:textColorLink="@color/white"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:cornerRadius="10dp"
-                tools:ignore="TouchTargetSizeCheck" />
-        </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
@@ -918,7 +896,7 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="wrap_content" />
         </TableRow>
 
@@ -926,9 +904,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <TextView
+                android:id="@+id/zagl3"
+                android:layout_width="29dp"
+                android:layout_height="wrap_content" />
             <Button
                 android:id="@+id/ed_slovo1"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -950,7 +932,7 @@
 
             <Button
                 android:id="@+id/ed_slovo2"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -972,7 +954,7 @@
 
             <Button
                 android:id="@+id/ed_slovo3"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -994,7 +976,7 @@
 
             <Button
                 android:id="@+id/ed_slovo4"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -1016,7 +998,7 @@
 
             <Button
                 android:id="@+id/ed_slovo5"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -1038,7 +1020,7 @@
 
             <Button
                 android:id="@+id/ed_slovo6"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -1060,7 +1042,7 @@
 
             <Button
                 android:id="@+id/ed_slovo7"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
@@ -1082,7 +1064,7 @@
 
             <Button
                 android:id="@+id/ed_slovo8"
-                android:layout_width="40dp"
+                android:layout_width="29dp"
                 android:layout_height="48dp"
                 android:layout_marginLeft="2dp"
                 android:backgroundTint="@color/bukv_0"
