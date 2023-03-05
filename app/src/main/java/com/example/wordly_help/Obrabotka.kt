@@ -11,7 +11,7 @@ import androidx.core.view.isVisible
 @SuppressLint("ResourceAsColor")
 fun Zap_Bukv() {
     //
-    // test2
+    // test1
     txt_select1!!.text = ""
     txt_select2!!.text = ""
     var Count_Bukv_Lang =32
