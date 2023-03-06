@@ -10,6 +10,14 @@ import androidx.core.view.isVisible
 
 @SuppressLint("ResourceAsColor")
 fun Zap_Bukv() {
+    if (Sost_Comm == true) {
+        rg_lang!!.isVisible  = false
+        Lang == "Рус"
+    }
+    else {
+        rg_lang!!.isVisible  = true
+    }
+
     //
     // test1
     txt_select1!!.text = ""

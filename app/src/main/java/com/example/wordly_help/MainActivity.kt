@@ -11,8 +11,10 @@ import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.appcompat.widget.AppCompatToggleButton
+import androidx.core.view.isVisible
 import com.example.wordly_help.R.drawable.text_style_no
 import java.io.IOException
+import kotlin.math.min
 
 public var ed_slovo = arrayOfNulls<Button>(8)
 public var bt = arrayOfNulls<Button>(31)
@@ -28,6 +30,10 @@ var btn_select: Button? = null
 var  tx_vsego : TextView? = null
 var txt_select1: TextView? = null
 var txt_select2: TextView? = null
+var rg_lang: RadioGroup? = null
+var rbt_ru: RadioButton? = null
+var rbt_en: RadioButton? = null
+
 public val Bukv_qwerty_Rus1 = arrayOf("й","ц","у","к","е","н","г", "ш", "щ", "з", "х")
 public val Bukv_qwerty_Rus2 = arrayOf("ф", "ы","в","а","п","р","о","л", "д", "ж", "э")
 public val Bukv_qwerty_Rus3 = arrayOf("я", "ч","с","м","и","т", "ь", "б", "ю")
@@ -70,6 +76,9 @@ class MainActivity : AppCompatActivity() {
         tx_vsego = findViewById<TextView>(R.id.tx_vsego) as TextView
         txt_select2 = findViewById<View>(R.id.txt_select2) as TextView
         btn_select = findViewById<View>(R.id.btn_select) as Button
+        rg_lang = findViewById<View>(R.id.rg_lang) as RadioGroup
+        rbt_ru = findViewById<View>(R.id.rbt_ru) as RadioButton
+        rbt_en = findViewById<View>(R.id.rbt_en) as RadioButton
 
         bt[0] = findViewById(R.id.bt_01_01) as Button // буквы
         bt[1] = findViewById(R.id.bt_01_02) as Button // буквы
@@ -127,9 +136,15 @@ class MainActivity : AppCompatActivity() {
         var product1 = ""
         var product2 = ""
         var Counter = 0
+        var SQL_str = ""
 
+        if (Sost_Comm != true) {
+            SQL_str += ("SELECT *  FROM EngRusPereseh ")
+        }
+        else {
+            SQL_str += ("SELECT *  FROM rus_full ")
+        }
 
-        var SQL_str = "SELECT *  FROM EngRusPereseh "
         if (Lang=="Рус") {
             SQL_str += "WHERE length(rus)=="
         }
@@ -202,10 +217,17 @@ class MainActivity : AppCompatActivity() {
         val cursor = mDb?.rawQuery(SQL_str , null)
             cursor?.moveToFirst()
             while ((cursor?.isAfterLast == false) and (Counter<=12)){
-                if (Lang=="Рус") {
-                    product1 = product1 + cursor?.getString(2) + "\n"
-                    product2 = product2 + cursor?.getString(1) + "\n"
-                }
+                if (Lang=="Рус")
+                    if (Sost_Comm!=true) {
+                        product1 = product1 + cursor?.getString(2) + "\n"
+                        product2 = product2 + cursor?.getString(1) + "\n"
+                    }
+                    else {
+                        val len_subs = min(30,cursor?.getString(1).toString().length)
+                        val Str_sub = (cursor?.getString(1))!!.substring(1,len_subs)+"\n"
+                        product1 = product1 + cursor?.getString(0) + "\n"
+                        product2 = product2 + Str_sub
+                    }
                 else {
                     product1 = product1 + cursor?.getString(1) + "\n"
                     product2 = product2 + cursor?.getString(2) + "\n"
@@ -265,6 +287,8 @@ class MainActivity : AppCompatActivity() {
     }
     fun Click_Comment(view: View) {
         Sost_Comm = (view as CheckBox).isChecked
+        if (Sost_Comm == true)  rg_lang!!.isVisible  = false
+        else rg_lang!!.isVisible  = true
 
     }
     fun Click_Clear(view: View) {
