@@ -16,16 +16,16 @@ import com.example.wordly_help.R.drawable.text_style_no
 import java.io.IOException
 import kotlin.math.min
 
-public var ed_slovo = arrayOfNulls<Button>(8)
-public var bt = arrayOfNulls<Button>(31)
-public var sost_bukv = Array<Int>(32,{0})
+var ed_slovo = arrayOfNulls<Button>(8)
+var bt = arrayOfNulls<Button>(31)
+var sost_bukv = Array<Int>(32,{0})
 
 
-public var sdvig_rus = 1072
-public var sdvig_eng = 97
-public var Count_Bukv = 5
-public var Lang = "Рус"
-public var Sost_Comm = false
+// var sdvig_rus = 1072
+// public var sdvig_eng = 97
+var Count_Bukv = 5
+var Lang = "Рус"
+var Sost_Comm = false
 var btn_select: Button? = null
 var  tx_vsego : TextView? = null
 var txt_select1: TextView? = null
@@ -301,31 +301,31 @@ class MainActivity : AppCompatActivity() {
 // Кнопка пустая ищем любую зеленую
             for (i in 0..31) {
                 if (sost_bukv[i] == 2) {
-                    if (i!=31) (view as Button).text = bt[i]!!.text.toString()
+                    if (i!=31) view.text = bt[i]!!.text.toString()
 
-                    else (view as Button).text = ""
+                    else view.text = ""
                     break
                 }
             }
         }
         else {
             for (i in 0..31) {
-                if ((sost_bukv[i] == 2) and ((view as Button).text == bt[i]!!.text.toString())) {
+                if ((sost_bukv[i] == 2) and (view.text == bt[i]!!.text.toString())) {
                     PosNumb = i+1
                     break
                 }
             }
             for (i in PosNumb..31) {
                 if ((sost_bukv[i] == 2)) {
-                    if (i!=31) (view as Button).text = bt[i]!!.text.toString()
+                    if (i!=31) view.text = bt[i]!!.text.toString()
 
-                    else (view as Button).text = ""
+                    else view.text = ""
                     break
                 }
             }
         }
-        if ((view as Button).text.toString()=="") {
-            (view as Button)!!.backgroundTintList = ColorStateList.valueOf(/* color = */Color.YELLOW)
+        if (view.text.toString()=="") {
+            view!!.backgroundTintList = ColorStateList.valueOf(/* color = */Color.YELLOW)
 
         }
         else {
