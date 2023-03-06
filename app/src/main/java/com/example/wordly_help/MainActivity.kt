@@ -124,10 +124,10 @@ class MainActivity : AppCompatActivity() {
         ed_slovo[6] = findViewById(R.id.ed_slovo7) as Button // буквы
         ed_slovo[7] = findViewById(R.id.ed_slovo8) as Button // буквы
 
-        findViewById<TextView>(R.id.textView5).backgroundTintList =
-            ColorStateList.valueOf(/* color = */Color.RED)
-        findViewById<TextView>(R.id.textView4).backgroundTintList =
-            ColorStateList.valueOf(/* color = */Color.GREEN)
+//        findViewById<TextView>(R.id.textView5).backgroundTintList =
+//            ColorStateList.valueOf(/* color = */Color.RED)
+//        findViewById<TextView>(R.id.textView4).backgroundTintList =
+//            ColorStateList.valueOf(/* color = */Color.GREEN)
         Zap_Bukv()
     }
 
@@ -216,14 +216,14 @@ class MainActivity : AppCompatActivity() {
 
         val cursor = mDb?.rawQuery(SQL_str , null)
             cursor?.moveToFirst()
-            while ((cursor?.isAfterLast == false) and (Counter<=12)){
+            while ((cursor?.isAfterLast == false) and (Counter<=14)){
                 if (Lang=="Рус")
                     if (Sost_Comm!=true) {
                         product1 = product1 + cursor?.getString(2) + "\n"
                         product2 = product2 + cursor?.getString(1) + "\n"
                     }
                     else {
-                        val len_subs = min(30,cursor?.getString(1).toString().length)
+                        val len_subs = min(25,cursor?.getString(1).toString().length)
                         val Str_sub = (cursor?.getString(1))!!.substring(1,len_subs)+"\n"
                         product1 = product1 + cursor?.getString(0) + "\n"
                         product2 = product2 + Str_sub

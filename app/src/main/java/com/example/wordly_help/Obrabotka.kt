@@ -12,7 +12,7 @@ import androidx.core.view.isVisible
 fun Zap_Bukv() {
     if (Sost_Comm == true) {
         rg_lang!!.isVisible  = false
-        Lang == "Рус"
+        Lang = "Рус"
     }
     else {
         rg_lang!!.isVisible  = true

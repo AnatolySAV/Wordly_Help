@@ -32,7 +32,7 @@
             android:fontFamily="monospace"
             android:text="Результат"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
 
         <TextView
@@ -43,8 +43,9 @@
             android:background="@color/purple_500"
             android:fontFamily="monospace"
             android:text="Результат"
+            android:textAlignment="viewStart"
             android:textColor="@color/black"
-            android:textSize="16sp"
+            android:textSize="14sp"
             android:textStyle="bold" />
     </LinearLayout>
     android:background="#00E676"
@@ -118,8 +119,6 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="80dp"
-            android:layout_marginHorizontal="4dp"
-            android:layout_marginBottom="609dp"
             android:background="@color/bukv_0"
             android:orientation="vertical">
 
@@ -213,7 +212,7 @@
             <CheckBox
                 android:id="@+id/Chk_comment"
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="45dp"
                 android:layout_marginRight="8dp"
                 android:checked="false"
                 android:minHeight="60sp"
@@ -230,9 +229,10 @@
                 android:id="@+id/tx_vsego"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
                 android:text="Отбор"
                 android:textColor="#FFEB3B"
-                android:textSize="12sp" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
