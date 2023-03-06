@@ -46,6 +46,8 @@ fun Zap_Bukv() {
     for (i in 1..31) {
 //      if (i<=Count_Bukv_Lang) {
             sost_bukv[i - 1] = 0
+            bt[i-1]?.setTextColor(ColorStateList.valueOf(/* color = */Color.WHITE))
+
 //            if (Lang=="Рус") {
 //                bt[i - 1]!!.text = Char(sdvig_rus + i - 1).toString()
 //            }

@@ -144,8 +144,16 @@ class MainActivity : AppCompatActivity() {
             if (sost_bukv[i-1]==2) {
                 Bukva = bt[i-1]?.text.toString()
                 if (Lang=="Рус") {
-                    SQL_str += (" AND (rus LIKE '%"+Bukva+"%')")
-
+                    if ((Bukva=="е") or  (Bukva=="ь")) {
+                        if (Bukva == "е") {
+                            SQL_str +=(" AND ((rus LIKE '%"+Bukva+"%') OR (rus LIKE '%"+'ё'+"%'))")
+                        }
+                        if (Bukva == "ь") {
+                            SQL_str +=(" AND ((rus LIKE '%"+Bukva+"%') OR (rus LIKE '%"+'ъ'+"%'))")
+                        }
+                    }
+                    else
+                        SQL_str += (" AND (rus LIKE '%" + Bukva + "%')")
                 }
                 else {
                     SQL_str += (" AND (eng LIKE '%"+Bukva+"%')")
@@ -156,6 +164,12 @@ class MainActivity : AppCompatActivity() {
                 Bukva = bt[i-1]?.text.toString()
                 if (Lang=="Рус") {
                     SQL_str += (" AND NOT(rus LIKE '%"+Bukva+"%')")
+                    if (Bukva=="е") {
+                        SQL_str += (" AND NOT(rus LIKE '%" + "ё" + "%')")
+                    }
+                    if (Bukva=="ь") {
+                        SQL_str += (" AND NOT(rus LIKE '%" + "ъ" + "%')")
+                    }
 
                 }
                 else {
@@ -187,7 +201,7 @@ class MainActivity : AppCompatActivity() {
 
         val cursor = mDb?.rawQuery(SQL_str , null)
             cursor?.moveToFirst()
-            while ((cursor?.isAfterLast == false) and (Counter<=11)){
+            while ((cursor?.isAfterLast == false) and (Counter<=12)){
                 if (Lang=="Рус") {
                     product1 = product1 + cursor?.getString(2) + "\n"
                     product2 = product2 + cursor?.getString(1) + "\n"

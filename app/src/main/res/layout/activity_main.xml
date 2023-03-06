@@ -5,8 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bukv_0"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="0dp"
+        android:layout_height="290dp"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/txt_select1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/teal_200"
+            android:fontFamily="monospace"
+            android:text="Результат"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_select2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/purple_500"
+            android:fontFamily="monospace"
+            android:text="Результат"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    android:background="#00E676"
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -14,13 +55,14 @@
         android:layout_height="90dp"
         android:layout_marginHorizontal="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+        tools:ignore="DuplicateIds">
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -670,6 +712,7 @@
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
+
             <Button
                 android:id="@+id/bt_02_11"
                 android:layout_width="29dp"
@@ -700,6 +743,7 @@
                 android:id="@+id/zagl1"
                 android:layout_width="29dp"
                 android:layout_height="wrap_content" />
+
             <Button
                 android:id="@+id/bt_03_01"
                 android:layout_width="29dp"
@@ -867,6 +911,7 @@
                 android:textStyle="bold"
                 app:cornerRadius="10dp"
                 tools:ignore="TouchTargetSizeCheck" />
+
             <Button
                 android:id="@+id/bt_03_09"
                 android:layout_width="29dp"
@@ -908,6 +953,12 @@
                 android:id="@+id/zagl3"
                 android:layout_width="29dp"
                 android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/zagl"
+                android:layout_width="29dp"
+                android:layout_height="wrap_content" />
+
             <Button
                 android:id="@+id/ed_slovo1"
                 android:layout_width="29dp"
@@ -1090,24 +1141,29 @@
     <LinearLayout
         android:id="@+id/lin_butt"
         android:layout_width="wrap_content"
-        android:layout_height="56dp"
-        android:layout_marginBottom="8dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout">
 
         <Button
             android:id="@+id/btn_select"
-            android:layout_width="wrap_content"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="4dp"
             android:backgroundTint="#3D5AFE"
+            android:drawableRight="@android:drawable/ic_dialog_dialer"
             android:onClick="Click_Select"
             android:text="Отбор"
-            android:textSize="12sp"
-            app:cornerRadius="20dp" />
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:cornerRadius="20dp"
+            app:iconPadding="4dp" />
 
         <TextView
             android:id="@+id/textView4"
@@ -1136,55 +1192,16 @@
             android:id="@+id/btn_clear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="4dp"
+            android:layout_marginRight="8dp"
             android:backgroundTint="#3D5AFE"
             android:onClick="Click_Clear"
             android:text="Очистка"
-            android:textSize="12sp"
-            app:cornerRadius="20dp" />
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:cornerRadius="20dp"
+            app:iconPadding="4dp" />
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginHorizontal="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lin_butt">
-
-        <TextView
-            android:id="@+id/txt_select1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/teal_200"
-            android:fontFamily="@font/courier_prime"
-            android:shadowColor="#D500F9"
-            android:text="Результат"
-            android:textColorLink="#FFEA00"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txt_select2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="4dp"
-            android:layout_weight="1"
-            android:background="#00E676"
-            android:fontFamily="@font/courier_prime"
-            android:shadowColor="#D500F9"
-            android:text="Результат"
-            android:textColorLink="#FFEA00"
-            android:textSize="20sp"
-            android:textStyle="bold" />
-    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
