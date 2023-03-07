@@ -196,15 +196,34 @@ class MainActivity : AppCompatActivity() {
         for (i in 0..Count_Bukv-1){
             if (ed_slovo[i]!!.text.toString() !="") {
                 Bukva = ed_slovo[i]?.text.toString().lowercase()
-                if (Lang=="Рус") {
-                    SQL_str += ((" AND (rus LIKE '" + "_".repeat(i) + Bukva + "_".repeat(Count_Bukv-i-1)+"')"))
+                if (ed_slovo[i]!!.backgroundTintList == ColorStateList.valueOf(Color.GREEN))
+                {
+                    if (Lang == "Рус") {
+                        SQL_str += ((" AND (rus LIKE '" + "_".repeat(i) + Bukva + "_".repeat(
+                            Count_Bukv - i - 1
+                        ) + "')"))
 
+                    } else {
+                        SQL_str += ((" AND (eng LIKE '" + "_".repeat(i) + Bukva + "_".repeat(
+                            Count_Bukv - i - 1
+                        ) + "')"))
+
+                    }
                 }
                 else {
-                    SQL_str += ((" AND (eng LIKE '" + "_".repeat(i) + Bukva + "_".repeat(Count_Bukv-i-1)+"')"))
+                    if (Lang == "Рус") {
+                        SQL_str += ((" AND NOT(rus LIKE '" + "_".repeat(i) + Bukva + "_".repeat(
+                            Count_Bukv - i - 1
+                        ) + "')"))
+
+                    } else {
+                        SQL_str += ((" AND NOT(eng LIKE '" + "_".repeat(i) + Bukva + "_".repeat(
+                            Count_Bukv - i - 1
+                        ) + "')"))
+
+                    }
 
                 }
-
             }
         }
         if (Lang=="Рус") {
@@ -293,15 +312,21 @@ class MainActivity : AppCompatActivity() {
     }
     fun Click_Clear(view: View) {
         Zap_Bukv()
+        if (rbt_ru!!.isChecked) Lang = rbt_ru!!.text as String
+        else Lang = rbt_en!!.text as String
     }
 
     fun Click_bukv_Slovo(view: View) {
         var PosNumb = 0
+        var Fix_Numb = 0
         if ((view as Button).text.toString()=="") {
-// Кнопка пустая ищем любую зеленую
+// Кнопка пустая ищем любую зеленую или красную
             for (i in 0..31) {
-                if (sost_bukv[i] == 2) {
-                    if (i!=31) view.text = bt[i]!!.text.toString()
+                if ((sost_bukv[i] == 2) or (sost_bukv[i] == 1)) {
+                    if (i!=31) {
+                        view.text = bt[i]!!.text.toString()
+                        Fix_Numb = i
+                    }
 
                     else view.text = ""
                     break
@@ -310,15 +335,17 @@ class MainActivity : AppCompatActivity() {
         }
         else {
             for (i in 0..31) {
-                if ((sost_bukv[i] == 2) and (view.text == bt[i]!!.text.toString())) {
+                if (((sost_bukv[i] == 2) or (sost_bukv[i] == 1)) and (view.text == bt[i]!!.text.toString())) {
                     PosNumb = i+1
                     break
                 }
             }
             for (i in PosNumb..31) {
-                if ((sost_bukv[i] == 2)) {
-                    if (i!=31) view.text = bt[i]!!.text.toString()
-
+                if (((sost_bukv[i] == 2) or (sost_bukv[i] == 1))) {
+                    if (i!=31) {
+                        view.text = bt[i]!!.text.toString()
+                        Fix_Numb = i
+                    }
                     else view.text = ""
                     break
                 }
@@ -326,10 +353,10 @@ class MainActivity : AppCompatActivity() {
         }
         if (view.text.toString()=="") {
             view!!.backgroundTintList = ColorStateList.valueOf(/* color = */Color.YELLOW)
-
         }
         else {
-            (view as Button)!!.backgroundTintList = ColorStateList.valueOf(/* color = */Color.GREEN)
+            if  (sost_bukv[Fix_Numb]==2) (view as Button)!!.backgroundTintList = ColorStateList.valueOf(/* color = */Color.GREEN)
+            else if (sost_bukv[Fix_Numb]==1) (view as Button)!!.backgroundTintList = ColorStateList.valueOf(/* color = */Color.RED)
 
         }
 //        Если текст "" - кнопку делаем желтой
