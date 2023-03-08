@@ -306,7 +306,11 @@ class MainActivity : AppCompatActivity() {
     }
     fun Click_Comment(view: View) {
         Sost_Comm = (view as CheckBox).isChecked
-        if (Sost_Comm == true)  rg_lang!!.isVisible  = false
+        if (Sost_Comm == true)  {
+            rg_lang!!.isVisible  = false
+            Lang = rbt_ru!!.text as String
+//            rg_lang!!.check(rbt_ru as Int)
+        }
         else rg_lang!!.isVisible  = true
 
     }
