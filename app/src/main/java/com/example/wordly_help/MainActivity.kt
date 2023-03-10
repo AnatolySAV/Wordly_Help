@@ -26,6 +26,8 @@ var sost_bukv = Array<Int>(32,{0})
 var Count_Bukv = 5
 var Lang = "Рус"
 var Sost_Comm = false
+var Sost_Dup = false
+
 var btn_select: Button? = null
 var  tx_vsego : TextView? = null
 var txt_select1: TextView? = null
@@ -227,9 +229,11 @@ class MainActivity : AppCompatActivity() {
             }
         }
         if (Lang=="Рус") {
+            if (Sost_Dup) SQL_str += " GROUP BY rus"
             SQL_str += " ORDER BY rus"
         }
         else {
+            if (Sost_Dup) SQL_str += " GROUP BY eng"
             SQL_str += " ORDER BY eng"
         }
 
@@ -367,4 +371,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    fun Click_Dup(view: View) {
+        Sost_Dup = (view as CheckBox).isChecked
+    }
 }
